@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire API Mobile Money</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <h1>Formulaire API Mobile Money</h1>
+
+            <label for="phone">Numéro de téléphone:
+                <div class="phone-wrapper">
+                    <select id="country-code" name="country-code" required>
+                        <option value="">Code du réseau</option>
+                        <option value="+243">+243 (République Démocratique du Congo)</option>
+                        <option value="+33">+33 (France)</option>
+                        <option value="+1">+1 (États-Unis / Canada)</option>
+                        <option value="+44">+44 (Royaume-Uni)</option>
+                        <option value="+49">+49 (Allemagne)</option>
+                    </select>
+                    <input type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" required>
+                </div>
+                <span class="info-bubble">Sélectionnez le code du réseau et entrez votre numéro de téléphone.</span>
+            </label>
+
+            <label for="amount">Montant et Devise:
+                <div class="amount-wrapper">
+                    <input type="number" id="amount" name="amount" placeholder="Montant" required>
+                    <select id="currency" name="currency" required>
+                        <option value="">Devise</option>
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="default">Défaut</option>
+                    </select>
+                </div>
+                <span class="info-bubble">Entrez le montant et sélectionnez la devise.</span>
+            </label>
+
+            <button type="submit">Payer</button>
+        </form>
+    </div>
+</body>
+</html>
